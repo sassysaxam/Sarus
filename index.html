@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sarus Computer and Mobile Repair  | Custom Website Development</title>
+  <!-- Fast Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    /* Ultra-smooth scrolling for budget phones */
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    .pulse-glow {
+      animation: pulseGlow 1.8s infinite;
+    }
+    @keyframes pulseGlow {
+      0%, 100% { box-shadow: 0 0 15px rgba(37, 211, 102, 0.6); }
+      50% { box-shadow: 0 0 30px rgba(37, 211, 102, 0.9); }
+    }
+  </style>
+</head>
+<body class="bg-slate-100 text-slate-900 font-sans antialiased pb-24">
+
+  <!-- TOP URGENCY BADGE -->
+  <div class="bg-amber-400 text-slate-950 px-3 py-1.5 text-xs sm:text-sm font-black text-center tracking-wide flex items-center justify-center gap-2 shadow-sm">
+    <span class="bg-red-600 text-white text-[10px] uppercase font-bold px-2 py-0.5 rounded-full animate-bounce">Open Now</span>
+    <span>⚡ 60 मिनेटमा स्क्रिन र ब्याट्री फेरिन्छ (Fast 60-Min Service) | Call: 9813282486</span>
+  </div>
+
+  <!-- HEADER -->
+  <header class="bg-white border-b border-slate-200 sticky top-0 z-40 px-4 py-3 shadow-sm">
+    <div class="max-w-4xl mx-auto flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <div class="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center text-white text-lg shadow-md font-black">
+          <i class="fa-solid fa-screwdriver-wrench"></i>
+        </div>
+        <div>
+          <h1 class="font-black text-slate-900 text-base sm:text-lg leading-tight uppercase tracking-tight">
+            MOBILE & COMPUTER CLINIC
+          </h1>
+          <p class="text-[11px] text-emerald-600 font-bold flex items-center gap-1">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span> पसल खुलै छ • Shop Open Today
+          </p>
+        </div>
+      </div>
+
+      <!-- Quick Call Button in Header -->
+      <a href="tel:+9779813282486" class="bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold px-3.5 py-2 rounded-lg flex items-center gap-1.5 shadow transition">
+        <i class="fa-solid fa-phone text-amber-400"></i>
+        <span class="hidden sm:inline">सिधै कल गर्नुहोस</span>
+        <span class="sm:hidden">Call</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- HERO SECTION: INSTANT DOPAMINE & VISUAL PROBLEM SELECTOR -->
+  <section class="bg-gradient-to-b from-blue-700 via-blue-800 to-slate-900 text-white px-4 pt-8 pb-10">
+    <div class="max-w-4xl mx-auto text-center space-y-4">
+      <span class="inline-block bg-amber-400 text-slate-950 font-black text-xs px-3 py-1 rounded-full uppercase tracking-wider shadow">
+        🔧 Phone or Laptop Problem?
+      </span>
+      
+      <h2 class="text-3xl sm:text-4xl font-black leading-tight tracking-tight">
+        फोन फुट्यो? बत्ती बलेन? वा लक भयो?<br>
+        <span class="text-amber-300 underline decoration-wavy decoration-red-500">चिन्ता नगर्नुहोस्, हामी बनाउँछौं!</span>
+      </h2>
+
+      <p class="text-slate-200 text-sm max-w-xl mx-auto font-medium">
+        (Screen Phutyo? Paani Pasyo? Computer Slow Chha? Kehi chinta garnu pardaina. Direct photo pathaunus ra karcha sodhnus!)
+      </p>
+
+      <!-- 1-TAP PROBLEM CHIPS (Clicks auto-fill WhatsApp) -->
+      <div class="pt-2">
+        <p class="text-xs text-amber-300 font-bold uppercase mb-2 tracking-wide">👇 सिधै तपाईंको समस्या छान्नुहोस् (Tap Your Problem):</p>
+        <div class="flex flex-wrap justify-center gap-2 max-w-2xl mx-auto">
+          <button onclick="quickSelect('Display Phuteko / Screen Cracked')" class="bg-white/10 hover:bg-white/20 border border-white/20 text-white text-xs font-bold px-3 py-2 rounded-full flex items-center gap-1.5 transition active:scale-95">
+            📱 Screen Phutyo
+          </button>
+          <button onclick="quickSelect('Battery Tikdaina / Charge Hudaina')" class="bg-white/10 hover:bg-white/20 border border-white/20 text-white text-xs font-bold px-3 py-2 rounded-full flex items-center gap-1.5 transition active:scale-95">
+            🔋 Battery / Charge
+          </button>
+          <button onclick="quickSelect('Paani Pasyo / Dead Phone')" class="bg-white/10 hover:bg-white/20 border border-white/20 text-white text-xs font-bold px-3 py-2 rounded-full flex items-center gap-1.5 transition active:scale-95">
+            💧 Paani Pasyo / Dead
+          </button>
+          <button onclick="quickSelect('Lock Birsey / Google FRP Lock')" class="bg-white/10 hover:bg-white/20 border border-white/20 text-white text-xs font-bold px-3 py-2 rounded-full flex items-center gap-1.5 transition active:scale-95">
+            🔓 Lock Birsey / Pattern
+          </button>
+          <button onclick="quickSelect('Computer / Laptop Slow Chha')" class="bg-white/10 hover:bg-white/20 border border-white/20 text-white text-xs font-bold px-3 py-2 rounded-full flex items-center gap-1.5 transition active:scale-95">
+            💻 Laptop / Slow PC
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INSTANT 2-FIELD WHATSAPP ESTIMATE BOX (NO CONFUSING FORMS) -->
+  <section class="max-w-xl mx-auto -mt-6 px-4 z-20 relative">
+    <div class="bg-white rounded-2xl shadow-2xl p-5 border-2 border-emerald-500">
+      <div class="flex items-center gap-3 mb-3">
+        <div class="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600 text-xl font-bold">
+          <i class="fa-brands fa-whatsapp"></i>
+        </div>
+        <div>
+          <h3 class="font-black text-slate-900 text-base">खर्च कति लाग्छ? (Get Free Estimate)</h3>
+          <p class="text-xs text-slate-500">मोडल र समस्या लेख्नुस्, तुरुन्तै रेट थाहा पाउनुहोस्।</p>
+        </div>
+      </div>
+
+      <form onsubmit="sendToWhatsApp(event)" class="space-y-3">
+        <div>
+          <label class="block text-xs font-black text-slate-700 uppercase mb-1">१. कुन मोबाइल वा ल्यापटप हो? (Device Model)</label>
+          <input type="text" id="userDevice" required placeholder="उदा: Redmi Note 11 / Samsung A12 / Dell Laptop" 
+                 class="w-full text-sm font-semibold px-3 py-2.5 bg-slate-50 border border-slate-300 rounded-xl focus:bg-white focus:ring-2 focus:ring-emerald-500 outline-none">
+        </div>
+
+        <div>
+          <label class="block text-xs font-black text-slate-700 uppercase mb-1">२. के समस्या छ? (What's Broken?)</label>
+          <input type="text" id="userService" required placeholder="उदा: Display phutyo / Charge hudaina / Windows halnu paryo" 
+                 class="w-full text-sm font-semibold px-3 py-2.5 bg-slate-50 border border-slate-300 rounded-xl focus:bg-white focus:ring-2 focus:ring-emerald-500 outline-none">
+        </div>
+
+        <button type="submit" class="pulse-glow w-full bg-emerald-600 hover:bg-emerald-500 active:scale-95 text-white font-black text-base py-3 rounded-xl shadow-lg transition flex items-center justify-center gap-2">
+          <i class="fa-brands fa-whatsapp text-2xl"></i>
+          <span>रेट सोध्नुहोस् (Send on WhatsApp)</span>
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ⭐ REAL SHOP PHOTOS (HORIZONTAL SWIPE FOR MOBILE - 60FPS) -->
+  <section class="max-w-4xl mx-auto px-4 mt-10">
+    <div class="flex items-center justify-between mb-3">
+      <div>
+        <h3 class="font-black text-slate-900 text-lg uppercase">हाम्रो पसल हेर्नुहोस् (Inside Our Shop)</h3>
+        <p class="text-xs text-slate-500">Swipe to see our real repair bench, shelf & counter</p>
+      </div>
+      <span class="text-xs font-bold text-blue-600 flex items-center gap-1">Swipe 👉</span>
+    </div>
+
+    <!-- Smooth Native Horizontal Scroll Container -->
+    <div class="flex gap-4 overflow-x-auto no-scrollbar pb-3 snap-x snap-mandatory">
+      <!-- Card 1: Station -->
+      <div class="min-w-[260px] sm:min-w-[300px] bg-white rounded-xl shadow border border-slate-200 overflow-hidden snap-center">
+        <!-- REPLACE src WITH YOUR ACTUAL PHOTO IF HOSTED LOCALLY (e.g., photo5.jpg) -->
+        <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80" alt="Shop Front" class="w-full h-44 object-cover">
+        <div class="p-3">
+          <p class="font-black text-xs text-slate-900">🏪 Shop Front & Counter</p>
+          <p class="text-[11px] text-slate-500">Mobile, Computer & Multi-Service Center</p>
+        </div>
+      </div>
+
+      <!-- Card 2: Workbench / Soldering Station -->
+      <div class="min-w-[260px] sm:min-w-[300px] bg-white rounded-xl shadow border border-slate-200 overflow-hidden snap-center">
+        <img src="https://images.unsplash.com/photo-1597733336794-12d05021d510?auto=format&fit=crop&w=600&q=80" alt="Repair Station" class="w-full h-44 object-cover">
+        <div class="p-3">
+          <p class="font-black text-xs text-slate-900">🔬 Hot Air & IC Rework Desk</p>
+          <p class="text-[11px] text-slate-500">Quick 857DW+ & Inverter 24/7 Backup</p>
+        </div>
+      </div>
+
+      <!-- Card 3: Covers & Glass Wall -->
+      <div class="min-w-[260px] sm:min-w-[300px] bg-white rounded-xl shadow border border-slate-200 overflow-hidden snap-center">
+        <img src="https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=600&q=80" alt="Mobile Covers" class="w-full h-44 object-cover">
+        <div class="p-3">
+          <p class="font-black text-xs text-slate-900">🛡️ Covers & Tempered Glass Rack</p>
+          <p class="text-[11px] text-slate-500">Silicone, printed & shockproof cases</p>
+        </div>
+      </div>
+
+      <!-- Card 4: Charger & Audio Gadgets -->
+      <div class="min-w-[260px] sm:min-w-[300px] bg-white rounded-xl shadow border border-slate-200 overflow-hidden snap-center">
+        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=600&q=80" alt="Headphones and Accessories" class="w-full h-44 object-cover">
+        <div class="p-3">
+          <p class="font-black text-xs text-slate-900">🎧 Chargers, Earbuds & Speakers</p>
+          <p class="text-[11px] text-slate-500">Fast Type-C cables, Bluetooth, WiFi CCTV</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🔥 SPECIAL OFFER: WEBSITE MAKING (PROFESSIONAL SPOTLIGHT) -->
+  <section class="max-w-4xl mx-auto px-4 mt-10">
+    <div class="bg-gradient-to-r from-slate-950 via-slate-900 to-indigo-950 text-white rounded-2xl p-6 sm:p-8 border-2 border-amber-400 shadow-2xl relative overflow-hidden">
+      <!-- Shiny decorative corner badge -->
+      <div class="absolute top-0 right-0 bg-red-600 text-white font-black text-[10px] sm:text-xs uppercase px-6 py-1 transform rotate-12 translate-x-3 translate-y-2 shadow-lg>
+        OFFER OFFER OFFER!
+      </div>
+
+      <div class="max-w-xl space-y-3">
+        <div class="inline-flex items-center gap-2 bg-blue-500/20 border border-blue-400/40 text-blue-300 text-xs px-3 py-1 rounded-full font-bold">
+          <i class="fa-solid fa-laptop-code"></i> नयाँ डिजिटल सेवा • New Service
+        </div>
+
+        <h3 class="text-2xl sm:text-3xl font-black text-white leading-tight">
+          यहाँ हजुरको कम्पनी, पसल, वा स्कुलको लागि <span class="text-amber-400 underline">आधुनिक वेबसाइट</span> पनि बन्छ!
+        </h3>
+
+        <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+          (Yaha hajurko company, pasal, school wa personal business ko lagi high-speed, mobile-friendly modern website banchha! Direct customer le Google ra Facebook bata vetchan.)
+        </p>
+
+        <div class="grid grid-cols-2 gap-2 text-xs pt-1">
+          <div class="flex items-center gap-2 text-emerald-400 font-bold">
+            <i class="fa-solid fa-check-circle"></i> Mobile ma super fast chha
+          </div>
+          <div class="flex items-center gap-2 text-emerald-400 font-bold">
+            <i class="fa-solid fa-check-circle"></i> WhatsApp & Call link setup
+          </div>
+          <div class="flex items-center gap-2 text-emerald-400 font-bold">
+            <i class="fa-solid fa-check-circle"></i> Google Maps मा देखिने
+          </div>
+          <div class="flex items-center gap-2 text-emerald-400 font-bold">
+            <i class="fa-solid fa-check-circle"></i> सुलभ नेपाली बजेट (Affordable)
+          </div>
+        </div>
+
+        <div class="pt-4 flex flex-wrap gap-3">
+          <a href="https://wa.me/9779813282486?text=Namaste!%20Mero%20business/pasal%20ko%20lagi%20website%20banaunu%20thiyo.%20Kati%20karcha%20lagchha%20hola%3F" target="_blank" 
+             class="bg-amber-400 hover:bg-amber-300 text-slate-950 font-black text-sm px-5 py-2.5 rounded-xl shadow-lg transition active:scale-95 flex items-center gap-2">
+            <i class="fa-brands fa-whatsapp text-lg text-emerald-800"></i>
+            <span>वेबसाइट खर्च बुझ्नुहोस् (Discuss Website)</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VISUAL CARDS: "WE FIX THIS SH*T" (PICTURES SHOW EVERYTHING CLEARLY) -->
+  <section class="max-w-4xl mx-auto px-4 mt-12">
+    <div class="text-center mb-6">
+      <span class="text-red-600 font-black text-xs uppercase tracking-wider">No Long English — Look at the pictures</span>
+      <h3 class="text-2xl sm:text-3xl font-black text-slate-900 mt-1">तपाईंको के बिग्रेको छ? (Choose & Fix)</h3>
+      <p class="text-xs sm:text-sm text-slate-600">जे बिग्रे पनि बन्छ • We repair it no matter how broken it looks</p>
+    </div>
+
+    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+      
+      <!-- Card 1: Display / Folder -->
+      <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden flex flex-col justify-between">
+        <img src="https://images.unsplash.com/photo-1512499617640-c74ae3a79d37?auto=format&fit=crop&w=500&q=80" alt="Cracked Screen" class="w-full h-32 object-cover">
+        <div class="p-3 text-left">
+          <span class="text-[10px] font-black bg-red-100 text-red-600 px-2 py-0.5 rounded uppercase">Display</span>
+          <h4 class="font-black text-sm text-slate-900 mt-1">Screen Phuteko?</h4>
+          <p class="text-[11px] text-slate-500">Samsung, Mi, Vivo, Oppo, Realme, iPhone original combo change.</p>
+          <button onclick="quickSelect('Display / Screen Broken')" class="mt-2 w-full bg-slate-900 hover:bg-blue-600 text-white font-bold text-xs py-1.5 rounded-lg transition">
+            रेट सोध्नुहोस् 👉
+          </button>
+        </div>
+      </div>
+
+      <!-- Card 2: Battery / Charging -->
+      <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden flex flex-col justify-between">
+        <img src="https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?auto=format&fit=crop&w=500&q=80" alt="Charging Port" class="w-full h-32 object-cover">
+        <div class="p-3 text-left">
+          <span class="text-[10px] font-black bg-amber-100 text-amber-700 px-2 py-0.5 rounded uppercase">Power</span>
+          <h4 class="font-black text-sm text-slate-900 mt-1">Charge / Battery</h4>
+          <p class="text-[11px] text-slate-500">Battery fuliyeko, drain bhayeko, pin loose bhayeko turuntai pherinchha.</p>
+          <button onclick="quickSelect('Battery / Charge Issue')" class="mt-2 w-full bg-slate-900 hover:bg-blue-600 text-white font-bold text-xs py-1.5 rounded-lg transition">
+            रेट सोध्नुहोस् 👉
+          </button>
+        </div>
+      </div>
+
+      <!-- Card 3: Water Damage / Dead Motherboard -->
+      <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden flex flex-col justify-between">
+        <img src="https://images.unsplash.com/photo-1588508065123-287b28e013da?auto=format&fit=crop&w=500&q=80" alt="Water Damage" class="w-full h-32 object-cover">
+        <div class="p-3 text-left">
+          <span class="text-[10px] font-black bg-blue-100 text-blue-700 px-2 py-0.5 rounded uppercase">IC & Board</span>
+          <h4 class="font-black text-sm text-slate-900 mt-1">Paani Pasyo / Dead</h4>
+          <p class="text-[11px] text-slate-500">Short circuit, network problem, mic/speaker sound IC repair.</p>
+          <button onclick="quickSelect('Dead Phone / Paani Pasyo')" class="mt-2 w-full bg-slate-900 hover:bg-blue-600 text-white font-bold text-xs py-1.5 rounded-lg transition">
+            रेट सोध्नुहोस् 👉
+          </button>
+        </div>
+      </div>
+
+      <!-- Card 4: Forgotten Lock / FRP / Flashing -->
+      <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden flex flex-col justify-between">
+        <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=500&q=80" alt="Locked Phone" class="w-full h-32 object-cover">
+        <div class="p-3 text-left">
+          <span class="text-[10px] font-black bg-emerald-100 text-emerald-700 px-2 py-0.5 rounded uppercase">Lock</span>
+          <h4 class="font-black text-sm text-slate-900 mt-1">Lock / FRP Bypass</h4>
+          <p class="text-[11px] text-slate-500">Google lock, forgotten password, logo hang, software update.</p>
+          <button onclick="quickSelect('Pattern / Google Lock Problem')" class="mt-2 w-full bg-slate-900 hover:bg-blue-600 text-white font-bold text-xs py-1.5 rounded-lg transition">
+            रेट सोध्नुहोस् 👉
+          </button>
+        </div>
+      </div>
+
+      <!-- Card 5: Laptop & Desktop PC -->
+      <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden flex flex-col justify-between">
+        <img src="https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&fit=crop&w=500&q=80" alt="Computer Repair" class="w-full h-32 object-cover">
+        <div class="p-3 text-left">
+          <span class="text-[10px] font-black bg-purple-100 text-purple-700 px-2 py-0.5 rounded uppercase">Computer</span>
+          <h4 class="font-black text-sm text-slate-900 mt-1">Computer / Laptop</h4>
+          <p class="text-[11px] text-slate-500">Windows install, SSD halera super fast banaune, printer toner refill.</p>
+          <button onclick="quickSelect('Computer / Laptop Service')" class="mt-2 w-full bg-slate-900 hover:bg-blue-600 text-white font-bold text-xs py-1.5 rounded-lg transition">
+            रेट सोध्नुहोस् 👉
+          </button>
+        </div>
+      </div>
+
+      <!-- Card 6: Genuine Accessories -->
+      <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden flex flex-col justify-between">
+        <img src="https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?auto=format&fit=crop&w=500&q=80" alt="Accessories" class="w-full h-32 object-cover">
+        <div class="p-3 text-left">
+          <span class="text-[10px] font-black bg-indigo-100 text-indigo-700 px-2 py-0.5 rounded uppercase">Store</span>
+          <h4 class="font-black text-sm text-slate-900 mt-1">Cover & Charger</h4>
+          <p class="text-[11px] text-slate-500">Earbuds, neckband, hammer glass, 65W fast charger & keypad phone.</p>
+          <button onclick="quickSelect('Accessories Query (Cover/Charger)')" class="mt-2 w-full bg-slate-900 hover:bg-blue-600 text-white font-bold text-xs py-1.5 rounded-lg transition">
+            रेट सोध्नुहोस् 👉
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- LOCATION & CONTACT DETAILS (FROM PHOTOS) -->
+  <section class="max-w-4xl mx-auto px-4 mt-12">
+    <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm">
+      <h3 class="font-black text-lg text-slate-900 uppercase mb-4 flex items-center gap-2">
+        <i class="fa-solid fa-map-pin text-red-600"></i> पसलको ठेगाना र सम्पर्क (Location & Call)
+      </h3>
+
+      <div class="grid sm:grid-cols-2 gap-4 text-sm">
+        <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-2">
+          <p class="font-bold text-slate-900">📍 ठेगाना (Location):</p>
+          <p class="text-slate-600 font-medium"> [Mahilwar-10] </p>
+          <p class="text-xs text-slate-50Near(Near Shiv देखि)</p>
+          <p class="text-xs text-emerald-700 font-bold">⏰ समय: बिहान 10:00 देखिखि साँझ 8:०० सम्म</p>
+        </div>
+
+        <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-2">
+          <p class="font-bold text-slate-900">📞 सिधै फोन गर्नुहोस:</p>
+          <div class="space-y-1 font-mono text-base font-black">
+            <a href="tel:+9779813282486" class="block text-blue-600 hover:underline">
+              <i class="fa-solid fa-phone mr-1"></i> +977-9813282486 (Ncell)
+            </a>
+            <a href="tel:+9779762739815" class="block text-blue-600 hover:underline">
+              <i class="fa-solid fa-phone mr-1"></i> +977-9762739815 (Namaste)
+            </a>
+          </div>
+          <p class="text-xs text-slate-500 font-sans">नम्बर सेभ गरेर सिधै ह्वाट्सएप पनि गर्न सक्नुहुन्छ।</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SIMPLE FOOTER -->
+  <footer class="mt-12 text-center text-xs text-slate-500 px-4">
+    <p class="font-bold text-slate-700"> Sarus Computer and Mobile Repair • NEPAL</p>
+    <p class="mt-1">All Mobile Hardware, Software, Computer & Website Development Services Under One Roof.</p>
+  </footer>
+
+  <!-- DUAL FLOATING ACTIONS (FOR 1-THUMB MOBILE FB USERS) -->
+  <div class="fixed bottom-3 inset-x-3 max-w-md mx-auto grid grid-cols-2 gap-2 z-50">
+    <a href="tel:+9779813282486" class="bg-slate-950 hover:bg-slate-900 active:scale-95 text-white font-black text-sm py-3 rounded-xl shadow-2xl flex items-center justify-center gap-2 border border-slate-700">
+      <i class="fa-solid fa-phone text-amber-400"></i>
+      <span>कल गर्नुहोस (Call)</span>
+    </a>
+
+    <a href="https://wa.me/9779813282486?text=Namaste!%20Mero%20phone/computer%20bigriyo.%20Rate%20bataidinus%20na." target="_blank" 
+       class="pulse-glow bg-emerald-600 hover:bg-emerald-500 active:scale-95 text-white font-black text-sm py-3 rounded-xl shadow-2xl flex items-center justify-center gap-2 border border-emerald-400">
+      <i class="fa-brands fa-whatsapp text-xl"></i>
+      <span>WhatsApp</span>
+    </a>
+  </div>
+
+  <!-- ULTRA LIGHTWEIGHT JAVASCRIPT -->
+  <script>
+    // When user taps any quick problem chip
+    function quickSelect(problemName) {
+      const serviceField = document.getElementById('userService');
+      const deviceField = document.getElementById('userDevice');
+      
+      serviceField.value = problemName;
+      deviceField.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      deviceField.focus();
+    }
+
+    // Handles form send straight into WhatsApp chat
+    function sendToWhatsApp(e) {
+      e.preventDefault();
+      const device = document.getElementById('userDevice').value.trim();
+      const service = document.getElementById('userService').value.trim();
+
+      const message = `Namaste! Service inquiry:%0A📱 Device: ${encodeURIComponent(device)}%0A⚠️ Problem: ${encodeURIComponent(service)}%0A👉 Karcha kati jati lagla ra time kati lagcha hola?`;
+      const whatsappURL = `https://wa.me/9779813282486?text=${message}`;
+
+      window.open(whatsappURL, '_blank');
+    }
+  </script>
+</body>
+  </html>
